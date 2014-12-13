@@ -17,7 +17,7 @@ class wordpress::install {
   # FILE TO DOWNLOAD: http://wordpress.org/latest.tar.gz
 
   exec { 'download-wordpress': #tee hee
-    command => '/usr/bin/wget http://wordpress.org/latest.tar.gz',
+    command => '/usr/bin/wget https://ja.wordpress.org/latest-ja.tar.gz -O latest.tar.gz',
     cwd     => '/vagrant/',
     creates => '/vagrant/latest.tar.gz'
   }
